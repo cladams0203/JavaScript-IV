@@ -9,7 +9,7 @@ class Person {
     }
     speak() {
         console.log(`Hello my name is ${this.name}, I am from ${this.location}`);
-    }
+    };
 }
 
 // Instructor class.
@@ -37,12 +37,12 @@ class Student extends Person {
         this.favSubjects = student.favSubjects;
     }
     listsSubjects() {
-        student.favSubjects.forEach(element => {
+        this.favSubjects.forEach(element => {
             console.log(`One of my favorite subjects is ${element}`);
         });
     }
     PRAssignment(subject) {
-        console.log(`${student.name} has submitted a PR for ${subject}.`);
+        console.log(`${this.name} has submitted a PR for ${subject}.`);
     }
 }
 
@@ -54,10 +54,10 @@ class ProjectManagers extends Instructor {
         this.favInstructor = pm.favInstructor;
     }
     standUp(channel) {
-        console.log(`${pm.name} announces to ${channel}. @channel standy times!`);
+        console.log(`${this.name} announces to ${channel}. @channel standy times!`);
     }
     deBugsCode(student, subject) {
-        console.log(`${pm.name} debugs ${student.name}'s code on ${subject}`);
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
     }
 }
 
@@ -89,6 +89,18 @@ const jordan = new ProjectManagers({
     location: 'New York',
     age: 27,
     gender: 'male',
+    favLanguage: 'Javascript',
+    specialty: 'WebPT6 PM',
+    catchPhrase: 'Droppin\' a link!',
     gradClassName: 'WebFT?',
     favInstructor: 'Jim Bob Cooter'
 });
+keiran.speak();
+jordan.speak();
+chris.speak();
+jordan.standUp('hey');
+jordan.deBugsCode(chris, 'javascript');
+chris.listsSubjects();
+chris.PRAssignment('javascript IV');
+keiran.demo('Javascript IV');
+keiran.grade(chris, 'Javascript Fundamentals');
