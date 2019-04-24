@@ -95,6 +95,7 @@ const jordan = new ProjectManagers({
     gradClassName: 'WebFT?',
     favInstructor: 'Jim Bob Cooter'
 });
+//Logs to make sure everything works.
 keiran.speak();
 jordan.speak();
 chris.speak();
