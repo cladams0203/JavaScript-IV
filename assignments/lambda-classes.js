@@ -45,3 +45,18 @@ class Student extends Person {
         console.log(`${student.name} has submitted a PR for ${subject}.`);
     }
 }
+
+//PM class.
+class ProjectManagers extends Instructor {
+    constructor(pm) {
+        super(pm);
+        this.gradClassName = pm.gradClassName;
+        this.favInstructor = pm.favInstructor;
+    }
+    standUp(channel) {
+        console.log(`${pm.name} announces to ${channel}. @channel standy times!`);
+    }
+    deBugsCode(student, subject) {
+        console.log(`${pm.name} debugs ${student.name}'s code on ${subject}`);
+    }
+}
