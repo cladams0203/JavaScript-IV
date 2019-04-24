@@ -60,3 +60,35 @@ class ProjectManagers extends Instructor {
         console.log(`${pm.name} debugs ${student.name}'s code on ${subject}`);
     }
 }
+
+//New Instructor.
+const keiran = new Instructor({
+    name: 'Keiran',
+    location: 'Somewhere USA',
+    age: 30,
+    gender: 'male',
+    favLanguage: 'Javascript',
+    specialty: 'Prototypes',
+    catchPhrase: 'How about a Meme?'
+});
+
+// New Student.
+const chris = new Student({
+    name: 'Chris',
+    location: 'Sarasota',
+    age: 39,
+    gender: 'male',
+    previousBackground: 'Mechanic',
+    className: 'WebPT6',
+    favSubjects: ['HTML', 'CSS', 'Javascript']
+});
+
+// New PM.
+const jordan = new ProjectManagers({
+    name: 'Jordan',
+    location: 'New York',
+    age: 27,
+    gender: 'male',
+    gradClassName: 'WebFT?',
+    favInstructor: 'Jim Bob Cooter'
+});
